@@ -76,7 +76,11 @@
                                 <action selector="connectWithPlayer:" destination="BYZ-38-t0r" id="Dav-wr-aRY"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="New Game" id="Gjz-7h-x1Q"/>
+                        <barButtonItem key="rightBarButtonItem" title="New Game" id="Gjz-7h-x1Q">
+                            <connections>
+                                <action selector="newGame:" destination="BYZ-38-t0r" id="qlq-IQ-05Z"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outletCollection property="fields" destination="71C-u5-0p9" collectionClass="NSMutableArray" id="Lh7-k8-Sba"/>
