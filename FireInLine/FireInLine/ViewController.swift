@@ -11,13 +11,33 @@ import MultipeerConnectivity
 
 class ViewController: UIViewController, MCBrowserViewControllerDelegate {
     var appDelegate:AppDelegate!
+    var currentPlayer:String!
     @IBOutlet var fields: [ChessImageView]!
     override func viewDidLoad() {
         super.viewDidLoad()
         appDelegate = UIApplication.sharedApplication().delegate! as! AppDelegate
-        appDelegate.mpcHandler.setupPeerWithDisplayName("2232")
+        appDelegate.mpcHandler.setupPeerWithDisplayName(UIDevice.currentDevice().name)
         appDelegate.mpcHandler.setupSession()
         appDelegate.mpcHandler.advertiseSelf(true)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "peerChangedStateWithNotification:", name: "MPC_DidChangeStateNotification", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handlerReceivedDataWithNotification:", name: "MPC_DidReceiveDataNotification", object: nil)
+        setField()
+        currentPlayer = "black"
+    }
+    func peerChangedStateWithNotification(notification:NSNotification) {
+        let userInfo = NSDictionary(dictionary: notification.userInfo!)
+        let state = userInfo.objectForKey("state") as! Int
+        if (state != MCSessionState.Connecting.rawValue) {
+            self.navigationItem.title = "Connected"
+        }
+    }
+    
+    func handlerReceivedDataWithNotification(notification:NSNotification) {
+        let userInfo = notification.userInfo! as Dictionary
+        let receivedData:NSData = userInfo["data"] as! NSData
+        let message = try! NSJSONSerialization.JSONObjectWithData(receivedData, options: NSJSONReadingOptions.AllowFragments)
+        let senderPeerID:MCPeerID = userInfo["peerID"] as! MCPeerID
+
     }
     @IBAction func connectWithPlayer(sender: AnyObject) {
         if appDelegate.mpcHandler.session != nil {
@@ -26,7 +46,13 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate {
             self.presentViewController(appDelegate.mpcHandler.browswer, animated: true, completion: nil)
         }
     }
-    func setGameLogic() {
+    func fieldTapped(recognizer:UITapGestureRecognizer){
+        let tappedField = recognizer.view as! ChessImageView
+        tappedField.setChess(currentPlayer);
+        let messageDict = ["field":tappedField.tag, "player":currentPlayer]
+    }
+    
+    func setField() {
         for index in 0...fields.count-1 {
             let gestureRecognizer = UITapGestureRecognizer(target: self, action: "fieldTapped")
             gestureRecognizer.numberOfTapsRequired = 1

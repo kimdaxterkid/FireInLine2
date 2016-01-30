@@ -23,6 +23,7 @@ class MPCHandler: NSObject, MCSessionDelegate {
         session = MCSession(peer: peerID)
         session.delegate = self
     }
+    
     func setupBrowser() {
         browswer = MCBrowserViewController(serviceType: "my-game", session: session)
         
