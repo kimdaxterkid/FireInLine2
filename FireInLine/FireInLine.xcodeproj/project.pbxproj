@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		150664BD1C5D435400917BF1 /* Black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 150664BC1C5D435400917BF1 /* Black.jpg */; };
-		150664BF1C5D435D00917BF1 /* White.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 150664BE1C5D435D00917BF1 /* White.jpg */; };
-		150664C11C5D436300917BF1 /* ChessBoard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 150664C01C5D436300917BF1 /* ChessBoard.jpg */; };
 		15E7BC021C5CC999004F1754 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7BC011C5CC999004F1754 /* AppDelegate.swift */; };
 		15E7BC041C5CC999004F1754 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E7BC031C5CC999004F1754 /* ViewController.swift */; };
 		15E7BC071C5CC999004F1754 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15E7BC051C5CC999004F1754 /* Main.storyboard */; };
@@ -20,9 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		150664BC1C5D435400917BF1 /* Black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Black.jpg; sourceTree = "<group>"; };
-		150664BE1C5D435D00917BF1 /* White.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = White.jpg; sourceTree = "<group>"; };
-		150664C01C5D436300917BF1 /* ChessBoard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChessBoard.jpg; sourceTree = "<group>"; };
 		15E7BBFE1C5CC999004F1754 /* FireInLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireInLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E7BC011C5CC999004F1754 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15E7BC031C5CC999004F1754 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,11 +64,8 @@
 				15E7BC131C5CD00F004F1754 /* ChessImageView.swift */,
 				15E7BC051C5CC999004F1754 /* Main.storyboard */,
 				15E7BC081C5CC999004F1754 /* Assets.xcassets */,
-				150664BE1C5D435D00917BF1 /* White.jpg */,
-				150664C01C5D436300917BF1 /* ChessBoard.jpg */,
 				15E7BC0A1C5CC999004F1754 /* LaunchScreen.storyboard */,
 				15E7BC0D1C5CC999004F1754 /* Info.plist */,
-				150664BC1C5D435400917BF1 /* Black.jpg */,
 			);
 			path = FireInLine;
 			sourceTree = "<group>";
@@ -111,7 +102,7 @@
 				TargetAttributes = {
 					15E7BBFD1C5CC999004F1754 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = C34536CJNF;
+						DevelopmentTeam = 39CT72668G;
 					};
 				};
 			};
@@ -139,11 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				15E7BC0C1C5CC999004F1754 /* LaunchScreen.storyboard in Resources */,
-				150664BD1C5D435400917BF1 /* Black.jpg in Resources */,
-				150664BF1C5D435D00917BF1 /* White.jpg in Resources */,
 				15E7BC091C5CC999004F1754 /* Assets.xcassets in Resources */,
 				15E7BC071C5CC999004F1754 /* Main.storyboard in Resources */,
-				150664C11C5D436300917BF1 /* ChessBoard.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +258,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FireInLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ilD.FireInLine;
+				PRODUCT_BUNDLE_IDENTIFIER = FireInLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -282,11 +273,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FireInLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ilD.FireInLine;
+				PRODUCT_BUNDLE_IDENTIFIER = FireInLine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

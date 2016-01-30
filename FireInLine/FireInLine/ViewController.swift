@@ -50,6 +50,13 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate {
         let tappedField = recognizer.view as! ChessImageView
         tappedField.setChess(currentPlayer);
         let messageDict = ["field":tappedField.tag, "player":currentPlayer]
+        do{
+            let messageData = try(NSJSONSerialization.dataWithJSONObject(messageDict, options: NSJSONWritingOptions.PrettyPrinted))
+            messageData
+        }
+        catch {
+            print(error)
+        }
     }
     
     func setField() {
