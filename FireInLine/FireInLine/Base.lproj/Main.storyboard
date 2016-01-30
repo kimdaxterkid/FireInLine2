@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dTk-gn-DrN">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FireInLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ChessBoard" translatesAutoresizingMaskIntoConstraints="NO" id="zWG-rB-UHy">
+                                <rect key="frame" x="0.0" y="64" width="600" height="542"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="71C-u5-0p9" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="181" y="207" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="tP3-xB-5Q0" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="243" y="207" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="mh4-ki-mf8" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="307" y="207" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="Stu-Bc-JiM" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="370" y="207" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-hn-hEM" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="181" y="274" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="Mkr-Eh-GrL" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="243" y="274" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="RaG-63-0eO" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="307" y="274" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="8" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="VnC-VR-QNT" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="181" y="337" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="9" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="rJg-yC-QwZ" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="243" y="337" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="x0j-vA-eZR" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="307" y="337" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="sMJ-ia-ZHi" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="370" y="337" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="13" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="NO3-xI-wdP" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="243" y="398" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="14" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="gNw-hB-qpG" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="307" y="398" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="7" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="DAX-5i-HcG" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="370" y="274" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="15" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="TDm-NA-qCJ" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="369" y="398" width="55" height="55"/>
+                            </imageView>
+                            <imageView tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black" translatesAutoresizingMaskIntoConstraints="NO" id="SoS-q6-gs3" customClass="ChessImageView" customModule="FireInLine" customModuleProvider="target">
+                                <rect key="frame" x="181" y="398" width="55" height="55"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Twp-DW-0Xt">
+                        <barButtonItem key="leftBarButtonItem" title="Connect" id="svX-J9-qTx">
+                            <connections>
+                                <action selector="connectWithPlayer:" destination="BYZ-38-t0r" id="Dav-wr-aRY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="New Game" id="Gjz-7h-x1Q"/>
+                    </navigationItem>
+                    <connections>
+                        <outletCollection property="fields" destination="71C-u5-0p9" collectionClass="NSMutableArray" id="Lh7-k8-Sba"/>
+                        <outletCollection property="fields" destination="71C-u5-0p9" collectionClass="NSMutableArray" id="Nyx-5e-8Qw"/>
+                        <outletCollection property="fields" destination="tP3-xB-5Q0" collectionClass="NSMutableArray" id="PvY-xU-Jlb"/>
+                        <outletCollection property="fields" destination="mh4-ki-mf8" collectionClass="NSMutableArray" id="al3-XP-7Oh"/>
+                        <outletCollection property="fields" destination="Stu-Bc-JiM" collectionClass="NSMutableArray" id="ToB-of-WcM"/>
+                        <outletCollection property="fields" destination="qQZ-hn-hEM" collectionClass="NSMutableArray" id="Ouy-4C-iIC"/>
+                        <outletCollection property="fields" destination="Mkr-Eh-GrL" collectionClass="NSMutableArray" id="xIB-cl-kKd"/>
+                        <outletCollection property="fields" destination="RaG-63-0eO" collectionClass="NSMutableArray" id="yzI-8l-hpf"/>
+                        <outletCollection property="fields" destination="DAX-5i-HcG" collectionClass="NSMutableArray" id="D10-qA-PLs"/>
+                        <outletCollection property="fields" destination="VnC-VR-QNT" collectionClass="NSMutableArray" id="8Zl-gr-HYH"/>
+                        <outletCollection property="fields" destination="rJg-yC-QwZ" collectionClass="NSMutableArray" id="CEc-a8-fQg"/>
+                        <outletCollection property="fields" destination="x0j-vA-eZR" collectionClass="NSMutableArray" id="5jt-du-8dp"/>
+                        <outletCollection property="fields" destination="sMJ-ia-ZHi" collectionClass="NSMutableArray" id="3Yp-zW-0MX"/>
+                        <outletCollection property="fields" destination="SoS-q6-gs3" collectionClass="NSMutableArray" id="M6o-jC-J7Q"/>
+                        <outletCollection property="fields" destination="NO3-xI-wdP" collectionClass="NSMutableArray" id="sAm-YC-J87"/>
+                        <outletCollection property="fields" destination="gNw-hB-qpG" collectionClass="NSMutableArray" id="PB0-dW-9Ym"/>
+                        <outletCollection property="fields" destination="TDm-NA-qCJ" collectionClass="NSMutableArray" id="T3F-Lt-GBY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="1105"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nNy-js-3Bo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dTk-gn-DrN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n4f-Km-vDW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YD0-7c-MxW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAa-Rc-TFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="451" y="1105"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Black" width="143" height="136"/>
+        <image name="ChessBoard" width="600" height="600"/>
+    </resources>
+</document>
