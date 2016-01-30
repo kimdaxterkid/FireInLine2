@@ -35,9 +35,25 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate {
     func handlerReceivedDataWithNotification(notification:NSNotification) {
         let userInfo = notification.userInfo! as Dictionary
         let receivedData:NSData = userInfo["data"] as! NSData
-        let message = try! NSJSONSerialization.JSONObjectWithData(receivedData, options: NSJSONReadingOptions.AllowFragments)
-        let senderPeerID:MCPeerID = userInfo["peerID"] as! MCPeerID
-
+        do {
+            let message = try NSJSONSerialization.JSONObjectWithData(receivedData, options: NSJSONReadingOptions.AllowFragments)
+            let senderPeerID:MCPeerID = userInfo["peerID"] as! MCPeerID
+            let senderDisplayName = senderPeerID.displayName
+            let field:Int? = message.objectForKey("field")?.integerValue
+            let player:String? = message.objectForKey("player") as? String
+            if (field != nil && player != nil) {
+                fields[field!].player = player
+                fields[field!].setChess(player!)
+                if (player == "black") {
+                    currentPlayer = "white"
+                }
+                else {
+                    currentPlayer = "black"
+                }
+            }
+        } catch {
+            print(error)
+        }
     }
     @IBAction func connectWithPlayer(sender: AnyObject) {
         if appDelegate.mpcHandler.session != nil {
@@ -46,22 +62,22 @@ class ViewController: UIViewController, MCBrowserViewControllerDelegate {
             self.presentViewController(appDelegate.mpcHandler.browswer, animated: true, completion: nil)
         }
     }
+    
     func fieldTapped(recognizer:UITapGestureRecognizer){
         let tappedField = recognizer.view as! ChessImageView
         tappedField.setChess(currentPlayer);
         let messageDict = ["field":tappedField.tag, "player":currentPlayer]
-        do{
-            let messageData = try(NSJSONSerialization.dataWithJSONObject(messageDict, options: NSJSONWritingOptions.PrettyPrinted))
-            messageData
-        }
-        catch {
+        do {
+            let messageData = try NSJSONSerialization.dataWithJSONObject(messageDict, options: NSJSONWritingOptions.PrettyPrinted)
+            try appDelegate.mpcHandler.session.sendData(messageData, toPeers: appDelegate.mpcHandler.session.connectedPeers, withMode: MCSessionSendDataMode.Unreliable)
+        } catch {
             print(error)
         }
     }
     
     func setField() {
-        for index in 0...fields.count-1 {
-            let gestureRecognizer = UITapGestureRecognizer(target: self, action: "fieldTapped")
+        for index in 0 ... fields.count - 1 {
+            let gestureRecognizer = UITapGestureRecognizer(target: self, action: "fieldTapped:")
             gestureRecognizer.numberOfTapsRequired = 1
             fields[index].addGestureRecognizer(gestureRecognizer)
         }

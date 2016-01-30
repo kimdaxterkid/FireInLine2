@@ -13,7 +13,7 @@ class ChessImageView: UIImageView {
     var player:String?
     var activated:Bool! = false
     
-    func setChess (_player:String) -> Void{
+    func setChess(_player:String) -> Void{
         self.player = _player
         if (activated == false) {
             if (_player == "black") {

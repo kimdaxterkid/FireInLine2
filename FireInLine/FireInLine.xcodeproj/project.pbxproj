@@ -102,7 +102,7 @@
 				TargetAttributes = {
 					15E7BBFD1C5CC999004F1754 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 39CT72668G;
+						DevelopmentTeam = C34536CJNF;
 					};
 				};
 			};
@@ -263,7 +263,7 @@
 				INFOPLIST_FILE = FireInLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FireInLine;
+				PRODUCT_BUNDLE_IDENTIFIER = "FireInLine-beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -278,7 +278,7 @@
 				INFOPLIST_FILE = FireInLine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = FireInLine;
+				PRODUCT_BUNDLE_IDENTIFIER = "FireInLine-beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
